@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Exercise Tracker | Free Code Camp</title>
+   <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon" />
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+   <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <div class="container">
+      <h1>EXERCISE TRACKER</h1>
+
+      <form action="/api/exercise/new-user" method="POST">
+         <h3>Create a New User</h3>
+         <input id="uname" type="text" name="username" placeholder="Username" required>
+         <input type="submit" value="Submit">
+      </form>
+
+      <form action="/api/exercise/users" method="GET">
+         <h3>List of All Users: </h3>
+         <input type="submit" value="Submit">
+      </form>
+
+      <form action="/api/exercise/log" method="GET">
+         <h3>Full Exercise Log of Any User</h3>
+         <input id="uid" type="text" name="userId" placeholder="User Id*" required>
+         <input type="submit" value="Submit">
+      </form>
+
+      <form action="/api/exercise/add" method="POST">
+         <h3>Add exercises</h3>
+         <input id="uid" type="text" name="userId" placeholder="User Id*" required>
+         <input id="desc" type="text" name="description" placeholder="Description*" required>
+         <input id="dur" type="text" name="duration" placeholder="Duration* (mins.)" required>
+         <input id="dat" type="text" name="date" placeholder="Date (yyyy-mm-dd)">
+         <input type="submit" value="Submit">
+      </form>
+
+      <form action="/api/exercise/otherlog" method="GET">
+         <h3>Filtered Exercise Log of Any User</h3>
+         <input id="uid" type="text" name="userId" placeholder="User Id*" required>
+         <input id="from" type="text" name="from" placeholder="From Date (yyyy-mm-dd)"></input>
+         <input id="to" type="text" name="to" placeholder="To Date (yyyy-mm-dd)"></input>
+         <input id="limit" type="text" name="limit" placeholder="Amount of Entries"></input>
+         <input type="submit" value="Submit">
+      </form>
+   </div>
+</body>
+
+</html>
